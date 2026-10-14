@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Matemático Interactivo</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif, Arial;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background-color: #FCE85D; 
+        }
+
+        .contenedor-principal {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        
+        .header-tarjeta {
+            background-color: rgba(255, 253, 247, 0.95); /* Blanco crema */
+            backdrop-filter: blur(6px);
+            border: 3px solid #8B4513; /* Marrón cálido */
+            border-radius: 16px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 15px rgba(139, 69, 19, 0.2);
+        }
+
+        h1 {
+            color: #5C2C16; /* Café chocolate profundo */
+            cursor: pointer;
+            margin: 0;
+            font-size: 28px;
+            text-shadow: 1px 1px 0px #e6ccb2;
+            text-align: center;
+        }
+
+        h1:hover {
+            color: #8B4513;
+        }
+
+        .subtitulo {
+            font-size: 20px;
+            color: #4A2511; /* Café oscuro */
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px dashed #A0522D; /* café */
+            padding-bottom: 6px;
+            font-weight: bold;
+            text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+        }
+
+        p {
+            font-size: 15px;
+            color: #3D2314;
+        }
+
+        /* Lista de entradas de blog */
+        #lista-entradas {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #lista-entradas li {
+            background-color: #ffffff;
+            border: 2px solid #D2B48C; /* Marrón claro */
+            border-left: 8px solid #8B4513; /* marrón saddle brown */
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 10px rgba(139, 69, 19, 0.15);
+        }
+
+        #lista-entradas li:hover {
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 6px 18px rgba(139, 69, 19, 0.25);
+            border-color: #8B4513;
+        }
+
+        #lista-entradas a {
+            color: #5C2C16; /* Café para los enlaces */
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #lista-entradas a:hover {
+            color: #A0522D;
+            text-decoration: underline;
+        }
+
+        .fecha-post {
+            font-size: 12px;
+            color: #7B3F00; /* Café canela */
+            font-weight: bold;
+            margin-left: 8px;
+            background-color: #F5E6D3; /* Fondo crema suave */
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+
+        .resumen-post {
+            margin: 8px 0 0 0;
+            background-color: transparent;
+            padding: 0;
+            font-size: 14px;
+            color: #555555; /* Gris neutro */
+        }
+
+        /* Sección de conceptos rápidos */
+        #conceptos {
+            list-style: none;
+            background-color: rgba(253, 248, 240, 0.95); /* Crema beige */
+            border: 2px dashed #A0522D;
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: 0 4px 12px rgba(160, 82, 45, 0.15);
+        }
+
+        #conceptos li {
+            color: #4A2511;
+            font-weight: 500;
+            padding: 8px 10px;
+            margin-bottom: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        #conceptos li:hover {
+            background-color: #EFE0CD; /* Suave café claro */
+        }
+
+        .resaltado {
+            background-color: #8B4513 !important;
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        .oculto {
+            display: none;
+        }
+
+        .cambio-color {
+            color: #A0522D !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        
+        <!-- Título principal -->
+        <div class="header-tarjeta">
+            <h1 id="titulo" onclick="cambiarColorTitulo()">Productos Notables 📎</h1>
+        </div>
+
+        <h2 class="subtitulo">Entradas del Blog</h2>
+        
+        <!-- Aquí JavaScript inyectará las entradas desde posts.js -->
+        <ul id="lista-entradas"></ul>
+
+        <h2 class="subtitulo">Recursos y Conceptos Básicos</h2>
+
+        <p onclick="alternarLista('conceptos')" style="cursor: pointer; font-weight: bold; color: #4A2511;">
+            📎 Conceptos Rápidos (Haz clic para mostrar u ocultar)
+        </p>
+
+        <ul id="conceptos" class="interactivo oculto">
+            <li onclick="resaltarElemento(this)">Álgebra: Manipulación de símbolos y ecuaciones.</li>
+            <li onclick="resaltarElemento(this)">Geometría: Estudio de las propiedades de figuras y espacios.</li>
+            <li onclick="resaltarElemento(this)">Cálculo: Análisis del cambio y del movimiento.</li>
+            <li onclick="resaltarElemento(this)">Estadística: Análisis y tratamiento de datos.</li>
+        </ul>
+
+    </div>
+
+    <!-- Archivo de configuración que contiene el arreglo de entradas -->
+    <script src="posts.js"></script>
+
+    <script>
+        // Cargar dinámicamente las entradas definidas en posts.js
+        const contenedorLista = document.getElementById('lista-entradas');
+
+        if (typeof publicaciones !== 'undefined' && publicaciones.length > 0) {
+            publicaciones.forEach(post => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <a href="entrada.html?id=${post.id}">${post.titulo}</a>
+                    <span class="fecha-post">${post.fecha}</span>
+                    <p class="resumen-post">${post.resumen}</p>
+                `;
+                contenedorLista.appendChild(li);
+            });
+        } else {
+            contenedorLista.innerHTML = '<li>No hay entradas publicadas aún.</li>';
+        }
+
+        // Funciones de interacción rápida
+        function cambiarColorTitulo() {
+            var titulo = document.getElementById('titulo');
+            titulo.classList.toggle('cambio-color');
+        }
+
+        function alternarLista(id) {
+            var lista = document.getElementById(id);
+            lista.classList.toggle('oculto');
+        }
+
+        function resaltarElemento(elemento) {
+            elemento.classList.toggle('resaltado');
+        }
+    </script>
+</body>
+</html>
