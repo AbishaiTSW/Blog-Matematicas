@@ -7,13 +7,28 @@ contenidoEntrada = `
     <li onclick="resaltarElemento(this)">
         <strong>1) (7n + 2)(7n - 2)</strong>
         <div class="detalle-paso">
-            <table>
-                <tr><th></th><th>7n</th><th>-2</th></tr>
-                <tr><th>7n</th><td>49n²</td><td>-14n</td></tr>
-                <tr><th>2</th><td>14n</td><td>-4</td></tr>
+            <table style="border-collapse: collapse; margin: 10px 0; text-align: center; width: 100%;">
+                <tr>
+                    <th style="border: 1px solid #333; padding: 8px; background-color: #f7f3e9;"></th>
+                    <th style="border: 1px solid #333; padding: 8px; background-color: #f7f3e9;">7n</th>
+                    <th style="border: 1px solid #333; padding: 8px; background-color: #f7f3e9;">-2</th>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #333; padding: 8px; background-color: #f7f3e9;">7n</th>
+                    <td style="border: 1px solid #333; padding: 8px;">49n²</td>
+                    <td style="border: 1px solid #333; padding: 8px; background-color: #fef3c7;">-14n</td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #333; padding: 8px; background-color: #f7f3e9;">2</th>
+                    <td style="border: 1px solid #333; padding: 8px; background-color: #fef3c7;">14n</td>
+                    <td style="border: 1px solid #333; padding: 8px;">-4</td>
+                </tr>
             </table>
-            <p style="background:none; padding:0; margin:5px 0;">(a + b)(a - b) = a² - b²<br>= (7n)² - (2)²</p>
-            <strong>Resultado:</strong> 49n² - 4
+            <p style="background:none; padding:0; margin:8px 0;">
+                (a + b)(a - b) = a² + (<strong>14n - 14n</strong>) - b²<br>
+                = (7n)² <strong>- 0</strong> - (2)²
+            </p>
+            <p style="background:none; padding:0; margin:5px 0;"><strong>Resultado:</strong> 49n² - 4</p>
         </div>
     </li>
 </section>`;
