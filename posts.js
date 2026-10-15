@@ -21,6 +21,13 @@ const publicaciones = [
     resumen: "Binomio al cuadrado y sus algoritmos de resolución."
   },
   {
+    id: "Factorizacion1",
+    titulo: "Factorización I",
+    archivo: "entradas/factorizacion.js",
+    fecha: "2026-10-16",
+    resumen: "Conceptos básicos de factorización y factor común con ejemplos."
+  },
+  {
     id: "Binomioterminocomun",
     titulo: "Binomio con Término Común",
     archivo: "entradas/binomio-termino-comun.js",
