@@ -90,55 +90,65 @@ const contenidoEntrada = `
     <h4 style="color: #5C2C16;">Relación caso por caso: Producto Notable y su inverso</h4>
     <p>A continuación, se relaciona cada caso de producto notable (ida) con su respectivo proceso inverso de factorización (regreso):</p>
 
-    <ol>
+    <ol style="display: flex; flex-direction: column; gap: 15px;">
         <li>
             <strong>Binomio al cuadrado &harr; Trinomio Cuadrado Perfecto (TCP)</strong>
-            <ul>
+            <ul style="margin-top: 5px;">
                 <li><em>Ida (Producto notable):</em> Elevar un binomio al cuadrado da como resultado un trinomio cuadrado perfecto.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">(a &plusmn; b)<sup>2</sup> = a<sup>2</sup> &plusmn; 2ab + b<sup>2</sup></p>
-                <li><em>Regreso (Factorización):</em> Dado un trinomio donde el primero y tercer término tienen raíz cuadrada exacta y el término del medio es el doble del producto de esas raíces, se regresa al binomio al cuadrado.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">a<sup>2</sup> &plusmn; 2ab + b<sup>2</sup> = (a &plusmn; b)<sup>2</sup></p>
             </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">(a &plusmn; b)<sup>2</sup> = a<sup>2</sup> &plusmn; 2ab + b<sup>2</sup></p>
+            <ul>
+                <li><em>Regreso (Factorización):</em> Dado un trinomio donde el primero y tercer término tienen raíz cuadrada exacta y el término del medio es el doble del producto de esas raíces, se regresa al binomio al cuadrado.</li>
+            </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">a<sup>2</sup> &plusmn; 2ab + b<sup>2</sup> = (a &plusmn; b)<sup>2</sup></p>
         </li>
-        <br>
+        
         <li>
             <strong>Binomios conjugados &harr; Diferencia de cuadrados</strong>
-            <ul>
+            <ul style="margin-top: 5px;">
                 <li><em>Ida (Producto notable):</em> Multiplicar la suma de dos términos por su diferencia resulta en una diferencia de cuadrados.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">(a + b)(a - b) = a<sup>2</sup> - b<sup>2</sup></p>
-                <li><em>Regreso (Factorización):</em> Dada una resta de dos términos que cuentan con cuadrados perfectos exactos, se descompone en el producto de binomios conjugados.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">a<sup>2</sup> - b<sup>2</sup> = (a + b)(a - b)</p>
             </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">(a + b)(a - b) = a<sup>2</sup> - b<sup>2</sup></p>
+            <ul>
+                <li><em>Regreso (Factorización):</em> Dada una resta de dos términos que cuentan con cuadrados perfectos exactos, se descompone en el producto de binomios conjugados.</li>
+            </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">a<sup>2</sup> - b<sup>2</sup> = (a + b)(a - b)</p>
         </li>
-        <br>
+        
         <li>
             <strong>Binomios con un término común &harr; Trinomio cuadrático de la forma x<sup>2</sup> + sx + p</strong>
-            <ul>
+            <ul style="margin-top: 5px;">
                 <li><em>Ida (Producto notable):</em> El producto de dos binomios que comparten un término en común genera un trinomio.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">(x + a)(x + b) = x<sup>2</sup> + (a + b)x + ab</p>
-                <li><em>Regreso (Factorización):</em> Partiendo de un trinomio cuadrático, se buscan dos números que sumados den el coeficiente lineal y multiplicados den el término independiente.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">x<sup>2</sup> + (a + b)x + ab = (x + a)(x + b)</p>
             </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">(x + a)(x + b) = x<sup>2</sup> + (a + b)x + ab</p>
+            <ul>
+                <li><em>Regreso (Factorización):</em> Partiendo de un trinomio cuadrático, se buscan dos números que sumados den el coeficiente lineal y multiplicados den el término independiente.</li>
+            </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">x<sup>2</sup> + (a + b)x + ab = (x + a)(x + b)</p>
         </li>
-        <br>
+        
         <li>
             <strong>Binomio al cubo &harr; Cubo perfecto de binomios</strong>
-            <ul>
+            <ul style="margin-top: 5px;">
                 <li><em>Ida (Producto notable):</em> Elevar un binomio al cubo genera un polinomio de cuatro términos.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">(a &plusmn; b)<sup>3</sup> = a<sup>3</sup> &plusmn; 3a<sup>2</sup>b + 3ab<sup>2</sup> &plusmn; b<sup>3</sup></p>
-                <li><em>Regreso (Factorización):</em> Si un polinomio cumple con la estructura de cubos en sus extremos y los triples productos correspondientes, se contrae a su binomio al cubo original.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">a<sup>3</sup> &plusmn; 3a<sup>2</sup>b + 3ab<sup>2</sup> &plusmn; b<sup>3</sup> = (a &plusmn; b)<sup>3</sup></p>
             </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">(a &plusmn; b)<sup>3</sup> = a<sup>3</sup> &plusmn; 3a<sup>2</sup>b + 3ab<sup>2</sup> &plusmn; b<sup>3</sup></p>
+            <ul>
+                <li><em>Regreso (Factorización):</em> Si un polinomio cumple con la estructura de cubos en sus extremos y los triples productos correspondientes, se contrae a su binomio al cubo original.</li>
+            </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">a<sup>3</sup> &plusmn; 3a<sup>2</sup>b + 3ab<sup>2</sup> &plusmn; b<sup>3</sup> = (a &plusmn; b)<sup>3</sup></p>
         </li>
-        <br>
+        
         <li>
             <strong>Binomios por trinomio &harr; Suma o diferencia de cubos</strong>
-            <ul>
+            <ul style="margin-top: 5px;">
                 <li><em>Ida (Producto notable):</em> Multiplicar un binomio por un trinomio con características específicas da una suma o diferencia de cubos.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">(a &plusmn; b)(a<sup>2</sup> ∓ ab + b<sup>2</sup>) = a<sup>3</sup> &plusmn; b<sup>3</sup></p>
-                <li><em>Regreso (Factorización):</em> Una suma o resta de dos términos cúbicos se puede descomponer en el producto de un binomio por un trinomio.</li>
-                <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center;">a<sup>3</sup> &plusmn; b<sup>3</sup> = (a &plusmn; b)(a<sup>2</sup> ∓ ab + b<sup>2</sup>)</p>
             </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">(a &plusmn; b)(a<sup>2</sup> ∓ ab + b<sup>2</sup>) = a<sup>3</sup> &plusmn; b<sup>3</sup></p>
+            <ul>
+                <li><em>Regreso (Factorización):</em> Una suma o resta de dos términos cúbicos se puede descomponer en el producto de un binomio por un trinomio.</li>
+            </ul>
+            <p style="background-color: #F5E6D3; padding: 8px; border-radius: 6px; text-align: center; margin: 8px 0;">a<sup>3</sup> &plusmn; b<sup>3</sup> = (a &plusmn; b)(a<sup>2</sup> ∓ ab + b<sup>2</sup>)</p>
         </li>
     </ol>
 `;
