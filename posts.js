@@ -33,5 +33,12 @@ const publicaciones = [
     archivo: "entradas/binomio-termino-comun.js",
     fecha: "2026-10-15",
     resumen: "Binomio con término común y sus algoritmos de resolución."
+  },
+  {
+    id: "Factorizacion2",
+    titulo: "Factorización II",
+    archivo: "entradas/Factorización II.js",
+    fecha: "2026-10-22",
+    resumen: "Técnicas avanzadas de factorización y ejemplos resueltos."
   }
 ];
