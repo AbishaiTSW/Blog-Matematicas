@@ -40,5 +40,12 @@ const publicaciones = [
     archivo: "entradas/Factorización II.js",
     fecha: "2026-10-22",
     resumen: "Técnicas avanzadas de factorización y ejemplos resueltos."
+    },
+  {
+    id: "EcuacionesPrimerGrado",
+    titulo: "Ecuaciones de Primer Grado",
+    archivo: "entradas/ecuaciones-primer-grado.js",
+    fecha: "2026-10-29",
+    resumen: "Conceptos y métodos para resolver ecuaciones de primer grado."
   }
 ];
